@@ -1,0 +1,19 @@
+server:
+  port: 88
+spring:
+  cloud:
+    gateway:
+      routes:
+        #路由断言规则数组
+        #id作为唯一标识
+        - id: test_baidu
+          uri: https://www.baidu.com
+          #断言里的参数里有uri=baidu跳转到uri
+          predicates:
+            - Query=uri,baidu
+
+        - id: test_qq
+          uri: https://www.qq.com
+          predicates:
+            - Query=uri,qq
+

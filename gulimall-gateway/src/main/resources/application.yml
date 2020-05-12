@@ -1,8 +1,20 @@
 server:
   port: 88
 spring:
+  application:
+    name: gulimall-gateway
   cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowCredentials: true
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
       routes:
         #路由断言规则数组
         #id作为唯一标识
@@ -16,4 +28,22 @@ spring:
           uri: https://www.qq.com
           predicates:
             - Query=uri,qq
+        ####路由配置规则  精确的路由放在最前面 模糊的路由放在后面
+        ##配置前端请求路由到renren
+        - id: product_route
+          ##lb nacos的负载均衡的写法
+          uri: lb://gulimall-product
+          predicates:
+          - Path=/api/product/**
+          filters:
+          - RewritePath=/api/(?<segment>/?.*), /$\{segment}
+        ##配置前端请求路由到renren
+        - id: admin_route
+          ##lb nacos的负载均衡的写法
+          uri: lb://renren-fast
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>/?.*), /renren-fast/$\{segment}
+
 

@@ -29,12 +29,20 @@ spring:
           predicates:
             - Query=uri,qq
         ####路由配置规则  精确的路由放在最前面 模糊的路由放在后面
-        ##配置前端请求路由到renren
+        ##配置前端请求路由到product
         - id: product_route
           ##lb nacos的负载均衡的写法
           uri: lb://gulimall-product
           predicates:
           - Path=/api/product/**
+          filters:
+          - RewritePath=/api/(?<segment>/?.*), /$\{segment}
+        ##配置前端请求路由到product
+        - id: thirdpart_route
+          ##lb nacos的负载均衡的写法
+          uri: lb://gulimall-thirdpart
+          predicates:
+          - Path=/api/thirdpart/**
           filters:
           - RewritePath=/api/(?<segment>/?.*), /$\{segment}
         ##配置前端请求路由到renren

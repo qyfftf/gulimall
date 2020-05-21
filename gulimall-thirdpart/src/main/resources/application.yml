@@ -8,8 +8,8 @@ spring:
       discovery:
         server-addr: fftf.fun:8848
     alicloud:
-      access-key: LTAI4G9NRq81spzSN5AEYYHm
-      secret-key: 6trEU3zB29nBpxe1G9ImqfbCk68m2p
+      access-key:  
+      secret-key:  
       oss:
         endpoint: oss-cn-beijing.aliyuncs.com
         bucket: qc-upload-file

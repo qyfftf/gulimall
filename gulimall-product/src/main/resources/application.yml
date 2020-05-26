@@ -17,6 +17,12 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000  # 指定Feign客户端连接提供者的超时时限   取决于网络环境
+        readTimeout: 5000   # 指定Feign客户端从请求到获取到提供者给出的响应的超时时限  取决于业务逻辑运算时间
 logging:
   level:
     root: debug

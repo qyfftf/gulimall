@@ -15,8 +15,6 @@ import com.qc.gulimall.coupon.service.HomeAdvService;
 import com.qc.common.utils.PageUtils;
 import com.qc.common.utils.R;
 
-
-
 /**
  * 首页轮播广告
  *

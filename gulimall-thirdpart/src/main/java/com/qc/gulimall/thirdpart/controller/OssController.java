@@ -33,7 +33,7 @@ public class OssController {
     @RequestMapping("/policy")
     public R getSignStr(){
         String host = "https://" + bucket + "." + endpoint; // host的格式为 bucketname.endpoint
-        String format = new SimpleDateFormat("yyyy-mm-dd").format(new Date());
+        String format = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         String dir = "gulimall/"+format+"/"; // 用户上传文件时指定的前缀。
         Map<String, String> respMap = null;
         try {

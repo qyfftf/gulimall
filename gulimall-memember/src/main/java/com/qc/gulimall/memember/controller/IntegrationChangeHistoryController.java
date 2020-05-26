@@ -15,8 +15,6 @@ import com.qc.gulimall.memember.service.IntegrationChangeHistoryService;
 import com.qc.common.utils.PageUtils;
 import com.qc.common.utils.R;
 
-
-
 /**
  * 积分变化历史记录
  *

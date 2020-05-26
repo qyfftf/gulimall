@@ -3,6 +3,7 @@ package com.qc.gulimall.ware.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.qc.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,8 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qc.gulimall.ware.entity.PurchaseDetailEntity;
 import com.qc.gulimall.ware.service.PurchaseDetailService;
 import com.qc.common.utils.PageUtils;
-import com.qc.common.utils.R;
-
 
 
 /**

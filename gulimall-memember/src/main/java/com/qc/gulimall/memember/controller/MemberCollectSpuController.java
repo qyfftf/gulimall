@@ -15,8 +15,6 @@ import com.qc.gulimall.memember.service.MemberCollectSpuService;
 import com.qc.common.utils.PageUtils;
 import com.qc.common.utils.R;
 
-
-
 /**
  * 会员收藏的商品
  *

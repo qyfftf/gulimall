@@ -2,7 +2,7 @@ package com.qc.gulimall.memember.controller;
 
 import java.util.Arrays;
 import java.util.Map;
-
+import com.qc.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qc.gulimall.memember.entity.GrowthChangeHistoryEntity;
 import com.qc.gulimall.memember.service.GrowthChangeHistoryService;
 import com.qc.common.utils.PageUtils;
-import com.qc.common.utils.R;
-
 
 
 /**

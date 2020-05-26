@@ -12,8 +12,6 @@ import com.qc.gulimall.memember.service.MemberService;
 import com.qc.common.utils.PageUtils;
 import com.qc.common.utils.R;
 
-
-
 /**
  * 会员
  *

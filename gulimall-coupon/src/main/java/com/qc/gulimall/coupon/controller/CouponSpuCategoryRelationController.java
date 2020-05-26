@@ -15,8 +15,6 @@ import com.qc.gulimall.coupon.service.CouponSpuCategoryRelationService;
 import com.qc.common.utils.PageUtils;
 import com.qc.common.utils.R;
 
-
-
 /**
  * 优惠券分类关联
  *

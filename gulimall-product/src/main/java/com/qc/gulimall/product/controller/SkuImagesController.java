@@ -1,28 +1,22 @@
 package com.qc.gulimall.product.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.qc.gulimall.product.entity.SkuImagesEntity;
-import com.qc.gulimall.product.service.SkuImagesService;
 import com.qc.common.utils.PageUtils;
 import com.qc.common.utils.R;
+import com.qc.gulimall.product.entity.SkuImagesEntity;
+import com.qc.gulimall.product.service.SkuImagesService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+import java.util.Map;
 
 
 /**
  * sku图片
  *
- * @author qc
- * @email sunlightcs@gmail.com
- * @date 2020-04-26 11:15:38
+ * @author leifengyang
+ * @email leifengyang@gmail.com
+ * @date 2019-10-01 22:50:32
  */
 @RestController
 @RequestMapping("product/skuimages")
@@ -79,7 +73,7 @@ public class SkuImagesController {
      * 删除
      */
     @RequestMapping("/delete")
-   // @RequiresPermissions("product:skuimages:delete")
+    //@RequiresPermissions("product:skuimages:delete")
     public R delete(@RequestBody Long[] ids){
 		skuImagesService.removeByIds(Arrays.asList(ids));
 

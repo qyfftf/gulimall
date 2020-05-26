@@ -16,9 +16,7 @@ import com.qc.gulimall.coupon.entity.CouponEntity;
 import com.qc.gulimall.coupon.service.CouponService;
 import com.qc.common.utils.PageUtils;
 import com.qc.common.utils.R;
-
-
-
+import com.qc.common.utils.R;
 /**
  * 优惠券信息
  *

@@ -15,8 +15,6 @@ import com.qc.gulimall.coupon.service.HomeSubjectService;
 import com.qc.common.utils.PageUtils;
 import com.qc.common.utils.R;
 
-
-
 /**
  * 
  *
